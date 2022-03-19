@@ -1,16 +1,19 @@
 let hour = document.querySelector(".hour");
 let min = document.querySelector(".min");
 let sec = document.querySelector(".sec");
-let deg = 6;
 
 setInterval(function () {
+  let deg = 6;
+  let bigdeg = 30;
+
   let soat = new Date();
+  console.log(soat);
 
-  let hr = soat.getHours();
-  let mn = soat.getMinutes();
-  console.log(mn);
-  let sc = soat.getSeconds();
+  let hr = soat.getHours() * bigdeg;
+  let mn = soat.getMinutes() * deg;
+  let sc = soat.getSeconds() * deg;
 
-  min.style.transform = `rotate(${mn}deg)`;
-  sec.style.transform = `rotate(${sc}deg)`;
+  hour.style.transform = `rotateZ(${hr + mn / 12}deg)`;
+  min.style.transform = `rotateZ(${mn}deg)`;
+  sec.style.transform = `rotateZ(${sc}deg)`;
 });
