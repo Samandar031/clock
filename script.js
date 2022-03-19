@@ -1,19 +1,16 @@
-// let deg = 6;
-// let hour = document.querySelector(".hour");
-// let minut = document.querySelector(".minut");
-// let secund = document.querySelector(".secund");
+let hour = document.querySelector(".hour");
+let min = document.querySelector(".min");
+let sec = document.querySelector(".sec");
+let deg = 6;
 
-// setInterval(() => {
-//   let day = new Date();
-//   console.log(day);
-//   let hh = day.getHours() * 30;
-//   console.log(hh);
-//   let mn = day.getMinutes() * deg;
-//   console.log(mn);
-//   let sc = day.getSeconds() * deg;
-//   console.log(sc);
+setInterval(function () {
+  let soat = new Date();
 
-//   hour.style.transform = `rotateZ(${hh + mn / 12}deg)`;
-//   secund.style.transform = `rotateZ(${sc}deg)`;
-//   minut.style.transform = `rotateZ(${mn}deg)`;
-// });
+  let hr = soat.getHours();
+  let mn = soat.getMinutes();
+  console.log(mn);
+  let sc = soat.getSeconds();
+
+  min.style.transform = `rotate(${mn}deg)`;
+  sec.style.transform = `rotate(${sc}deg)`;
+});
