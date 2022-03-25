@@ -25,3 +25,26 @@ setInterval(function () {
   timeMin.textContent = soat.getMinutes();
   timeSec.textContent = soat.getSeconds();
 });
+
+// tuggle
+
+let tuggle = document.querySelector(".tuggle");
+let btnTugle = document.querySelector(".btn-tun");
+let body = document.querySelector("body");
+
+let a = 0;
+
+function func() {
+  if (a == 2) {
+    a = 0;
+    document.documentElement.style.setProperty("--text", "#121145");
+  } else if (a == 1) {
+    document.documentElement.style.setProperty("--text", "black");
+  }
+  btnTugle.style.transform = `translateX(${a * 38}px)`;
+}
+
+tuggle.addEventListener("click", function () {
+  a++;
+  func();
+});

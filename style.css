@@ -11,13 +11,15 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #acc8e5;
+  background-color: var(--back);
 }
 
 :root {
   --text: #121145;
   --back: #acc8e5;
-  --backo: #ace6c2;
+
+  --backo: #362072;
+  --tugle: #1c2847;
 }
 
 .oclock {
@@ -112,18 +114,38 @@ body {
   display: flex;
   justify-content: center;
   border: 4px solid var(--text);
-  padding: 20px;
+  padding: 5px;
   margin: 30px;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 700;
   color: var(--text);
 }
 
 .time div {
-  border: 4px solid var(--text);
-  padding: 40px;
-  border-radius: 10px;
-  margin: 10px;
-  width: 140px;
+  border: 3px solid var(--text);
+  padding: 20px;
+  border-radius: 10%;
+  margin: 2px;
+  width: 100px;
+}
+
+/* BTN tun va kun  */
+
+.tuggle {
+  border: 2px solid var(--text);
+  width: 70px;
+  height: 31px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-tun {
+  background-color: var(--text);
+  width: 28px;
+  height: 29px;
+  border-radius: 50%;
+  transition: 1s all;
+  transform: translateX(0px);
 }
