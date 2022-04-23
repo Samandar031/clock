@@ -26,15 +26,14 @@ let timeSec = document.querySelector(".time-three");
 //   timeSec.textContent = soat.getSeconds();
 // });
 setInterval(function () {
+  let deg = 6;
+  let bigDeg = 30;
 
-let deg = 6;
-let bigDeg = 30;
+  let kun = new Data();
 
-let kun = new Data();
-
-let soat = kun.getHours();
-let minut = kun.getMinutes();
-let secunt = kun.getSeconds();
+  let soat = kun.getHours();
+  let minut = kun.getMinutes();
+  let secunt = kun.getSeconds();
 
   let hr = soat;
   let mn = minut;
@@ -47,23 +46,23 @@ let secunt = kun.getSeconds();
 
 // tuggle
 
-// let tuggle = document.querySelector(".tuggle");
-// let btnTugle = document.querySelector(".btn-tun");
-// let body = document.querySelector("body");
+let tuggle = document.querySelector(".tuggle");
+let btnTugle = document.querySelector(".btn-tun");
+let body = document.querySelector("body");
 
-// let a = 0;
+let a = 0;
 
-// function func() {
-//   if (a == 2) {
-//     a = 0;
-//     document.documentElement.style.setProperty("--text", "#121145");
-//   } else if (a == 1) {
-//     document.documentElement.style.setProperty("--text", "black");
-//   }
-//   btnTugle.style.transform = `translateX(${a * 38}px)`;
-// }
+function func() {
+  if (a == 2) {
+    a = 0;
+    document.documentElement.style.setProperty("--text", "#121145");
+  } else if (a == 1) {
+    document.documentElement.style.setProperty("--text", "black");
+  }
+  btnTugle.style.transform = `translateX(${a * 38}px)`;
+}
 
-// tuggle.addEventListener("click", function () {
-//   a++;
-//   func();
-// });
+tuggle.addEventListener("click", function () {
+  a++;
+  func();
+});
